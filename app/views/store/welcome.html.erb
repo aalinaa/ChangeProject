@@ -1,0 +1,19 @@
+<div id="cathegories">
+	<ul>
+		<% @cathegories.each do |c|%>
+			
+			<li>
+				<%=image_tag(c.image, class: "cahtegory_img") %>
+									
+					<ul class="cathegory_items">
+						<li><h6><%= link_to(c.name, store_path(cathegory: c.id), class: "cathegory_title")%></h6></li>
+						<li>Token</li>
+						<li> Moler</li>
+						<li> Pon-Kon</li>
+					</ul>
+				
+			</li>
+				
+		<%end%>
+	</ul>
+</div>

@@ -1,0 +1,32 @@
+<ul class="navigate">
+      <li ><%= link_to "All", requests_path(attr: "all") %></li>
+      <span class="hline"></span>
+      <li ><%= link_to "To you", requests_path(attr: "to") %></li>
+      <span class="hline"></span>
+      <li ><%= link_to "From you", requests_path(attr: "from") %></li>
+    </ul>
+
+<table id="requests">
+    <% @requests.each do |request| %>
+     <%# render partial: 'requests/request', locals: {request: request} %>
+      <tr class='<%="status#{request.status}" %>' >
+        <td>
+          <%= image_tag(request.product.img, class: 'list_image') %>
+        </td>
+        <td class="list_description">
+          <dl>
+            <dt><%=request.product.title%></dt>
+            <dd><%= truncate(strip_tags(request.product.description),length:80)%></dd>
+          </dl> 
+        </td>
+        <td class="list_actions">
+          <%= link_to 'Show', request %><br/>
+
+           <%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>  
+</table>
+
+<br>
+

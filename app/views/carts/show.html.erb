@@ -1,0 +1,6 @@
+<table>
+	<%=render(@cart.line_items) %>		
+</table>
+
+<%= button_to 'Empty Cart', @cart, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+

@@ -1,0 +1,5 @@
+$("#cart_quantity").html("<%= escape_javascript render @cart %>");
+$(".aded").each(function(){
+	$(this).prop('value','Aded to Cart').attr('disabled','disabled').removeClass('aded');
+});
+

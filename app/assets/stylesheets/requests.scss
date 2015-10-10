@@ -1,0 +1,71 @@
+.requests{
+	.list_image{
+		width:100px;
+		height:120px;
+	}
+
+	.list_description{
+		padding-top: 20px;
+		width:70%;
+
+		dl{
+			margin:0;
+		}
+
+		dt{
+			color:#244;
+			font-weight:bold;
+			font-size:larger;
+		}
+
+		dd{
+			margin:0;
+		}
+	}
+	.list_actions{
+		font-size:x-small;
+		text-align:right;
+		padding-left:1em;
+	}
+	table{
+		border-collapse:collapse;
+		width: 90%;
+		margin: auto;
+		tr{
+			border-bottom:1px solid #ccc;
+		}
+
+		.status0{
+		}
+
+		.status1{
+			background-color: #dbfec7;
+		}
+
+		.status2{
+			background-color: #fcc8c8;
+		}
+	}
+
+	table tr td{
+		padding:5px;
+		vertical-align:top;
+	}
+
+	
+	.navigate{
+			
+			float: right;
+			overflow: hidden;
+			margin-bottom: 20px;
+
+			li{
+				display: inline-block;	
+				cursor: pointer;			
+			}
+			.hline{
+				margin: 0 15px;
+			}
+		}
+
+}

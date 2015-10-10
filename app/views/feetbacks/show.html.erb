@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @feetback.text %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @feetback.user %>
+</p>
+
+<p>
+  <strong>Mark:</strong>
+  <%= @feetback.mark %>
+</p>
+
+<%= link_to 'Edit', edit_feetback_path(@feetback) %> |
+<%= link_to 'Back', feetbacks_path %>

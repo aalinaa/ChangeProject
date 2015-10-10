@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @request.customer %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @request.owner %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @request.product %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request.status %>
+</p>
+
+<%= link_to 'Back', requests_path %>

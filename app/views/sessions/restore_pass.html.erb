@@ -1,0 +1,18 @@
+<%= form_tag do %>
+		<fieldset>
+			<legend>Enter your login</legend>
+
+			<div>
+				<%= label_tag :name, 'Name:' %>
+				<%= text_field_tag :name, "", class: 'form-control' %>
+			</div>	
+
+			<div>
+				<%= submit_tag "Send",class: 'btn btn-primary' %>							
+			</div>	
+		</fieldset>
+	<% end %>
+	<%if flash[:note]%>
+		<p><%=flash[:note]%></p>
+	<%end%>
+</div>

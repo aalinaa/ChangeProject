@@ -1,0 +1,52 @@
+<div id="listing_products">
+	<% @products.each do |product| %>		
+		<div class="entry">
+			<div class="image"><%= image_tag( product.img )%></div>
+			<div class="description">
+				<h4><%= link_to(product.title, store_path(product_id: product.id))%></h4>
+				
+				<div class="change">
+					<h6>Ready to change on:</h6>
+					<p>Car, Coter, Poltoro, Toker,Footler</p>
+				</div>
+				<span class="from">From Spain</span>	
+			</div>
+
+			<!-- Buttons Add to Cart/Send Request TODO: "send request" shoud open the modal window below-->
+			<%if session[:user_id] && session[:user_id]!=product.user_id %>	
+				<% if @requests.exists?(product_id: product.id) %>
+					<%= button_to 'Request Sended', "", class: "btn btn-success send_request", disabled: "disable", remote: true%>
+				<%else%>
+					<%= button_to 'Send Request', requests_path(product_id: product), class: "btn btn-success send_request", remote: true%>			
+				<%end%>		
+				<% if @cart.line_items.exists?(product_id: product.id) %>
+					<%= button_to 'Added to Cart', "", class: "btn btn-default add_to_cart", disabled: "disable", remote: true %>
+				<%else%>
+					<%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-default add_to_cart", remote: true %>
+				<%end%>
+			<%end%>			
+		</div>	
+	<% end%>
+</div>
+
+
+<!-- TODO Button "send request" will open modal window in wich user will choose the product to change on and send request -->
+<!-- Modal  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send</button>
+        <%= button_to 'Send', requests_path(), class: "btn btn-success send_request",  remote: true%>
+      </div>
+    </div>
+  </div>
+</div>
+ -->

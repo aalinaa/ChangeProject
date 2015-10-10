@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  }	
+
+#main_pannel{	
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	height: 30px;
+	padding-top: 5px;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.35);
+	box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.35);
+	
+
+	ul{
+		padding: 0;
+		float: right;
+		li{
+			list-style: none;
+			display: inline;			
+			padding-right: 2em;
+			padding-left: 2em;
+
+			a, #cart_quantity{
+				padding-top: 5px;
+				color: #5e5e5e;
+				font-size: 14px;
+				text-decoration: none;
+			}
+			
+		}
+	}
+}
+#main_pannel,#banner{
+	display: block;
+}
+
+
+#notice{
+	color: #000 !important;
+	border: 2px solid red;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #f0f0f0;
+	font: bold smaller sans-serif;	
+}
+
+
+
+
+#main{
+	margin: auto;
+	margin-top: 30px;
+	width: 90%;
+	max-width: 1200px;
+	padding: 1em;
+	padding-top: 0;
+}
+
+.hline{
+	height: 100%;
+	border-left:1px solid #ccc;
+}
+.wline{
+	width: 100%;
+	border-bottom:1px solid #ccc;
+}
+a:hover {
+    background:none;
+    text-shadow: 4px 4px 2px rgba(209, 209, 209, 1);
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+	cursor: default;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+#banner_pannel{
+	margin: auto;
+	margin-top: 30px;
+    	width: 1200px;
+    	padding-top: 15px;
+		#search_field{
+			padding: 10px 0;
+			text-align: center;	
+			float: right;
+			button{
+				margin-left: 15px;
+			}
+		}
+
+		#banner{
+			// background: #9c9;
+			padding-top: 30px;
+			padding: 5px;
+			padding-bottom: 15px;
+			font:small-caps 50px/50px "Times New Roman",serif;
+			color: #337ab7;
+			text-shadow: 4px 4px 2px rgba(150, 150, 150, 0.7);
+		}
+		#search_field,#banner{
+			display: inline-block;
+		}
+
+		#title{
+			font:small-caps 50px/50px "Times New Roman",serif;
+			color: rgba(7, 16, 24, 0.2);
+			float: right;
+			
+		}
+		#banner,#title{
+			display: inline-block;
+		}
+	}

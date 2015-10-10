@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Feetbacks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>User</th>
+      <th>Mark</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feetbacks.each do |feetback| %>
+      <tr>
+        <td><%= feetback.text %></td>
+        <td><%= feetback.user %></td>
+        <td><%= feetback.mark %></td>
+        <td><%= link_to 'Show', feetback %></td>
+        <td><%= link_to 'Edit', edit_feetback_path(feetback) %></td>
+        <td><%= link_to 'Destroy', feetback, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feetback', new_feetback_path %>

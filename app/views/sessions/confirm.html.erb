@@ -1,0 +1,7 @@
+<p>We have sent you an email. Please confirm your data.</p>
+
+<%= link_to 'Send email again', confirm_url(id: session[:user_id], send: "true") %>
+
+<%if !flash[:note].nil?%>
+	<p><%=flash[:note]%></p>
+<%end%>
